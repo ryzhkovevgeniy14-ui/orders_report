@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формирование отчёта</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>📊 Формирование отчёта</h1>
+        <p class="subtitle">Загрузите Excel-файл, чтобы получить отчёт по мастерам</p>
+
+        <form id="upload-form" enctype="multipart/form-data">
+            <div class="file-wrapper" id="file-wrapper">
+                <input type="file" id="file-input" name="file" accept=".xlsx">
+                <span class="file-label" id="file-label">📁 Выбрать файл</span>
+                <div class="file-name" id="file-name">Файл не выбран</div>
+            </div>
+
+            <button type="submit" id="submit-btn" disabled>Сформировать отчёт</button>
+        </form>
+
+        <!-- Блок успеха (скрыт по умолчанию) -->
+        <div id="success-block" style="display: none; margin-top: 24px;">
+            <div class="success-message">✅ Отчёт успешно сформирован</div>
+            <button id="download-btn" class="download-btn">📥 Скачать отчёт</button>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <script src="/frontend/script.js"></script>
+</body>
+</html>

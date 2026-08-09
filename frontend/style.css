@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 48px 40px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0b1a33;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.file-wrapper {
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 40px 20px;
+    background: #f8fafc;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.file-wrapper:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.file-wrapper input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.file-label:hover {
+    background: #1d4ed8;
+}
+
+.file-name {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #94a3b8;
+    min-height: 22px;
+}
+
+.file-name.has-file {
+    color: #0b1a33;
+    font-weight: 500;
+}
+
+#submit-btn {
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #cbd5e1;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: not-allowed;
+    transition: background 0.2s;
+}
+
+#submit-btn:not(:disabled) {
+    background: #2563eb;
+    cursor: pointer;
+}
+
+#submit-btn:not(:disabled):hover {
+    background: #1d4ed8;
+}
+
+#status {
+    margin-top: 18px;
+    font-size: 14px;
+    min-height: 24px;
+}
+
+#status.success {
+    color: #16a34a;
+}
+
+#status.error {
+    color: #dc2626;
+}
+
+#status.loading {
+    color: #2563eb;
+}
+
+/* Блок успеха */
+#success-block {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-message {
+    color: #16a34a;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #16a34a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.download-btn:hover {
+    background: #15803d;
+}
