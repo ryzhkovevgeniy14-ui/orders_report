@@ -24,7 +24,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-# Раздаём HTML, CSS и JavaScript из папки frontend.
+# Раздаём HTML, CSS и JavaScript из папки frontend
 app.mount(
     "/frontend",
     StaticFiles(directory="frontend"),
