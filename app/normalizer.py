@@ -33,14 +33,14 @@ CITY_ALIASES = {
     "краснадар": "Краснодар",
 }
 
-# Значения, соответствующие "Да" для полей типа Да/Нет
+# Значения, соответствующие "Да" для поля "Рекламация"
 RECLAMATION_TRUE = {
     "да",
     "yes",
     "1",
 }
 
-# Значения, соответствующие "Нет" для полей типа Да/Нет
+# Значения, соответствующие "Нет" для поля "Рекламация"
 RECLAMATION_FALSE = {
     "нет",
     "no",
@@ -52,7 +52,7 @@ PHOTO_TRUE = RECLAMATION_TRUE
 PHOTO_FALSE = RECLAMATION_FALSE
 
 
-# Нормализация статусов
+# Нормализация статуса
 def normalize_status(value):
     """
     Нормализует статус заказа.
@@ -79,7 +79,7 @@ def normalize_status(value):
     return None, "Неизвестный статус"
 
 
-# Нормализация дат
+# Нормализация даты
 def normalize_russian_date(value):
     """
     Преобразует русское название месяца мая в числовой формат.
@@ -146,7 +146,7 @@ def normalize_date(value):
     return None, "Некорректная дата"
 
 
-# Нормализация сумм
+# Нормализация суммы
 def normalize_amount(value):
     """
     Приводит сумму заказа к числовому формату.
@@ -216,6 +216,7 @@ def normalize_master(value):
     return value, None
 
 
+# Нормализация города
 def normalize_city(value):
     """
     Нормализует название города.
@@ -244,6 +245,7 @@ def normalize_city(value):
     return value, None
 
 
+# Нормализация значения поля "Рекламация"
 def normalize_reclamation(value):
     """
     Приводит значение рекламации к "Да" или "Нет".
@@ -263,6 +265,7 @@ def normalize_reclamation(value):
     return None, "Неизвестное значение рекламации"
 
 
+# Нормализация значения поля "Фото загружено"
 def normalize_photo(value):
     """
     Приводит значение наличия фотографии к "Да" или "Нет".
