@@ -23,20 +23,6 @@ Python-приложение для обработки Excel-файла с зак
 * **Uvicorn** — запуск FastAPI-приложения
 * **python-dotenv** — загрузка настроек из `.env`
 
-## Настройка Telegram
-
-Для отправки уведомлений необходимо создать файл `.env` в корне проекта:
-
-```env
-TELEGRAM_BOT_TOKEN=токен_бота
-TELEGRAM_CHAT_ID=id_чата
-```
-
-Где:
-
-* `TELEGRAM_BOT_TOKEN` — токен Telegram-бота;
-* `TELEGRAM_CHAT_ID` — идентификатор чата, в который будут отправляться уведомления.
-
 ## Установка
 
 Клонировать репозиторий и перейти в каталог проекта:
@@ -72,7 +58,19 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Создать `.env` с настройками Telegram.
+## Настройка Telegram
+
+Для отправки уведомлений необходимо создать файл `.env` в корне проекта:
+
+```env
+TELEGRAM_BOT_TOKEN=токен_бота
+TELEGRAM_CHAT_ID=id_чата
+```
+
+Где:
+
+* `TELEGRAM_BOT_TOKEN` — токен Telegram-бота;
+* `TELEGRAM_CHAT_ID` — идентификатор чата, в который будут отправляться уведомления.
 
 ## Способы запуска
 
